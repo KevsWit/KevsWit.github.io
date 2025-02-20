@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kevin Castillo - Portafolio</title>
+  
+  <!-- Bootstrap CSS desde CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:wght@400;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome (opcional para iconos) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      font-family: 'Muli', sans-serif;
+    }
+    /* Estilos para el sidebar */
+    #sideNav {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      background-color: #0073e6;
+      color: #fff;
+      padding-top: 1rem;
+    }
+    #sideNav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    #sideNav .nav-link:hover {
+      text-decoration: underline;
+    }
+    /* Ajuste del contenido para no quedar tapado por el sidebar */
+    #mainContent {
+      margin-left: 260px;
+      padding: 20px;
+    }
+    /* Estilos para secciones */
+    section {
+      margin-bottom: 2rem;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    /* Header del sidebar */
+    #sideNav .sidebar-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    #sideNav .img-profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body id="page-top">
+
+  <!-- Sidebar de navegación -->
+  <nav id="sideNav">
+    <div class="sidebar-header">
+      <!-- Puedes usar una imagen de perfil, o dejar un ícono -->
+      <img class="img-profile mb-2" src="images/kevpic.jpg" alt="Foto de Kevin">
+      <h4>Kevin Castillo</h4>
+      <p>Desarrollador | Analista de Datos</p>
+    </div>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+      <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
+      <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+      <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+      <li class="nav-item"><a class="nav-link" href="#certificaciones">Certificaciones</a></li>
+      <li class="nav-item"><a class="nav-link" href="#idiomas">Idiomas</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div id="mainContent">
+    
+    <!-- Sección "Sobre mí" -->
+    <section id="sobre-mi">
+      <h2 class="mb-3"><i class="fas fa-user"></i> Sobre mí</h2>
+      <p>
+        ¡Hola! Soy Kevin Castillo, apasionado por la resolución de problemas complejos y la creación de soluciones innovadoras a través de la programación. Tengo una sólida base en algoritmos, estructuras de datos y desarrollo web. Mi objetivo es aplicar mis conocimientos en un entorno real, mejorar mis habilidades blandas y desarrollar aplicaciones que impacten positivamente en la sociedad.
+      </p>
+    </section>
+    
+    <!-- Sección "Educación" -->
+    <section id="educacion">
+      <h2 class="mb-3"><i class="fas fa-graduation-cap"></i> Educación</h2>
+      <ul class="list-unstyled">
+        <li><strong>2021–2025</strong>: Universidad Politécnica Salesiana, Quito, Ecuador - <em>Ingeniería en Ciencias de la Computación</em></li>
+        <li><strong>2019–2020</strong>: Escuela Politécnica Nacional, Quito, Ecuador - <em>Ingeniería en Desarrollo de Software (incompleto)</em></li>
+        <li><strong>2013–2019</strong>: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador - <em>Bachiller en Ciencias</em></li>
+        <li><strong>2005–2013</strong>: Centro Educativo Indira Gandhi, Quito, Ecuador - <em>Estudios primarios</em></li>
+      </ul>
+    </section>
+    
+    <!-- Sección "Experiencia" -->
+    <section id="experiencia">
+      <h2 class="mb-3"><i class="fas fa-briefcase"></i> Experiencia</h2>
+      <h4>Pasante en Datos y Analítica</h4>
+      <p><strong>Banco Pichincha</strong> | <em>Mar - Sep 2024</em></p>
+      <ul>
+        <li>Automatización de procesos del RUN de seguros.</li>
+        <li>Colaboración en la migración a la nube de uno de los procesos del banco.</li>
+      </ul>
+    </section>
+    
+    <!-- Sección "Habilidades Técnicas" -->
+    <section id="habilidades">
+      <h2 class="mb-3"><i class="fas fa-cogs"></i> Habilidades Técnicas</h2>
+      <h5>Lenguajes de Programación</h5>
+      <p>C# | Python | R | Javascript | C++ | Java | SQL</p>
+      <h5>Desarrollo Web</h5>
+      <p>HTML5 | CSS | Javascript</p>
+      <h5>Sistemas Operativos</h5>
+      <p>Linux</p>
+    </section>
+    
+    <!-- Sección "Certificaciones" -->
+    <section id="certificaciones">
+      <h2 class="mb-3"><i class="fas fa-award"></i> Certificaciones</h2>
+      <ul class="list-unstyled">
+        <li><strong>2023</strong>: Ganador del Datatón UPS 2024</li>
+        <li><strong>2023</strong>: Certificación en Stratio Generative AI Data Fabric: Basics, Business, Operations</li>
+      </ul>
+    </section>
+    
+    <!-- Sección "Idiomas" -->
+    <section id="idiomas">
+      <h2 class="mb-3"><i class="fas fa-language"></i> Idiomas</h2>
+      <ul class="list-unstyled">
+        <li><strong>Español</strong>: Lengua materna (C2)</li>
+        <li><strong>Inglés</strong>: Nivel intermedio (B1)</li>
+      </ul>
+    </section>
+    
+    <!-- Sección "Contacto" -->
+    <section id="contacto">
+      <h2 class="mb-3"><i class="fas fa-envelope"></i> Contacto</h2>
+      <ul class="list-unstyled">
+        <li><strong>GitHub</strong>: <a href="https://github.com/KevsWit" target="_blank">KevsWit</a></li>
+        <li><strong>Email</strong>: <a href="mailto:key.gcastillo@outlook.com">key.gcastillo@outlook.com</a></li>
+        <li><strong>Teléfono</strong>: +593 988671223</li>
+      </ul>
+    </section>
+    
+    <!-- Pie de página -->
+    <footer class="text-center mt-5">
+      <p>&copy; 2023 Kevin Castillo. Todos los derechos reservados.</p>
+    </footer>
+    
+  </div>
+
+  <!-- Bootstrap Bundle con Popper JS desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script para scroll suave (opcional) -->
+  <script>
+    document.querySelectorAll('a.nav-link').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
