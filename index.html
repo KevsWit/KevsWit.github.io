@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kevin Castillo - Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:wght@400;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:wght@400;800&display=swap"
+    rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
-    body { font-family: 'Muli', sans-serif; }
+    body {
+      font-family: 'Muli', sans-serif;
+    }
+
     #sideNav {
-      height: 100vh; position: fixed; top: 0; left: 0; width: 250px;
-      background-color: #0073e6; color: #fff; padding-top: 1rem;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      background-color: #0073e6;
+      color: #fff;
+      padding-top: 1rem;
     }
-    #sideNav a { color: #fff; text-decoration: none; }
-    #sideNav .nav-link:hover { text-decoration: underline; }
-    #mainContent { margin-left: 260px; padding: 20px; }
+
+    #sideNav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    #sideNav .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    #mainContent {
+      margin-left: 260px;
+      padding: 20px;
+    }
+
     section {
-      margin-bottom: 2rem; background-color: #fff;
-      padding: 20px; border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
     #sideNav .sidebar-header {
-      text-align: center; margin-bottom: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
     }
+
     #sideNav .img-profile {
-      width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     @media (max-width: 768px) {
@@ -33,30 +65,36 @@
         position: relative;
         width: 100%;
         height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         padding: 10px;
         z-index: 10;
+        display: block;
       }
+
       #sideNav .sidebar-header {
         display: flex;
         align-items: center;
         gap: 10px;
-        margin: 0;
+        margin-bottom: 10px;
       }
+
       #sideNav .img-profile {
         width: 50px;
         height: 50px;
       }
+
       #sideNav ul.nav {
-        flex-direction: row;
+        display: flex;
         flex-wrap: wrap;
-        margin: 0;
-        padding: 0;
-        gap: 10px;
+        justify-content: center;
+        padding-left: 0;
+        margin-bottom: 0;
       }
+
+      #sideNav ul.nav li {
+        list-style: none;
+        margin: 5px 10px;
+      }
+
       #mainContent {
         margin-left: 0;
         margin-top: 1rem;
@@ -64,12 +102,14 @@
     }
   </style>
 </head>
+
 <body id="page-top">
   <nav id="sideNav">
     <div class="sidebar-header">
       <img class="img-profile mb-2" src="images/kevpic.jpg" alt="Foto de Kevin">
       <h4>Kevin Castillo</h4>
-      <p data-es="Desarrollador | Científico de Datos" data-en="Developer | Data Scientyst">Desarrollador | Científico de Datos</p>
+      <p data-es="Desarrollador | Científico de Datos" data-en="Developer | Data Scientyst">Desarrollador | Científico
+        de Datos</p>
       <div class="text-center mt-3">
         <label class="form-check-label text-white">
           <input type="checkbox" id="langSwitch" class="form-check-input me-1">
@@ -79,10 +119,14 @@
     </div>
     <ul class="nav flex-column">
       <li class="nav-item"><a class="nav-link" href="#sobre-mi" data-es="Sobre mí" data-en="About Me">Sobre mí</a></li>
-      <li class="nav-item"><a class="nav-link" href="#educacion" data-es="Educación" data-en="Education">Educación</a></li>
-      <li class="nav-item"><a class="nav-link" href="#experiencia" data-es="Experiencia" data-en="Experience">Experiencia</a></li>
-      <li class="nav-item"><a class="nav-link" href="#habilidades" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
-      <li class="nav-item"><a class="nav-link" href="#certificaciones" data-es="Certificaciones" data-en="Certifications">Certificaciones</a></li>
+      <li class="nav-item"><a class="nav-link" href="#educacion" data-es="Educación" data-en="Education">Educación</a>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#experiencia" data-es="Experiencia"
+          data-en="Experience">Experiencia</a></li>
+      <li class="nav-item"><a class="nav-link" href="#habilidades" data-es="Habilidades"
+          data-en="Skills">Habilidades</a></li>
+      <li class="nav-item"><a class="nav-link" href="#certificaciones" data-es="Certificaciones"
+          data-en="Certifications">Certificaciones</a></li>
       <li class="nav-item"><a class="nav-link" href="#idiomas" data-es="Idiomas" data-en="Languages">Idiomas</a></li>
       <li class="nav-item"><a class="nav-link" href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
     </ul>
@@ -92,18 +136,32 @@
     <section id="sobre-mi">
       <h2 class="mb-3" data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
       <p data-es="¡Hola! Soy Kevin Castillo, apasionado por la resolución de problemas complejos y la creación de soluciones innovadoras a través de la programación. Tengo una sólida base en algoritmos, estructuras de datos y desarrollo web. Mi objetivo es aplicar mis conocimientos en un entorno real, mejorar mis habilidades blandas y desarrollar aplicaciones que impacten positivamente en la sociedad."
-         data-en="Hi! I'm Kevin Castillo, passionate about solving complex problems and creating innovative solutions through programming. I have a solid foundation in algorithms, data structures, and web development. My goal is to apply my knowledge in real-world environments, improve my soft skills, and develop applications that positively impact society.">
-        ¡Hola! Soy Kevin Castillo, apasionado por la resolución de problemas complejos y la creación de soluciones innovadoras a través de la programación. Tengo una sólida base en algoritmos, estructuras de datos y desarrollo web. Mi objetivo es aplicar mis conocimientos en un entorno real, mejorar mis habilidades blandas y desarrollar aplicaciones que impacten positivamente en la sociedad.
+        data-en="Hi! I'm Kevin Castillo, passionate about solving complex problems and creating innovative solutions through programming. I have a solid foundation in algorithms, data structures, and web development. My goal is to apply my knowledge in real-world environments, improve my soft skills, and develop applications that positively impact society.">
+        ¡Hola! Soy Kevin Castillo, apasionado por la resolución de problemas complejos y la creación de soluciones
+        innovadoras a través de la programación. Tengo una sólida base en algoritmos, estructuras de datos y desarrollo
+        web. Mi objetivo es aplicar mis conocimientos en un entorno real, mejorar mis habilidades blandas y desarrollar
+        aplicaciones que impacten positivamente en la sociedad.
       </p>
     </section>
 
     <section id="educacion">
       <h2 class="mb-3" data-es="Educación" data-en="Education">Educación</h2>
       <ul class="list-unstyled">
-        <li data-es="2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador - Ingeniería en Ciencias de la Computación" data-en="2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador - Computer Science Engineering">2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador - Ingeniería en Ciencias de la Computación</li>
-        <li data-es="2019–2020: Escuela Politécnica Nacional, Quito, Ecuador - Ingeniería en Desarrollo de Software (incompleto)" data-en="2019–2020: Escuela Politécnica Nacional, Quito, Ecuador - Software Development Engineering (incomplete)">2019–2020: Escuela Politécnica Nacional, Quito, Ecuador - Ingeniería en Desarrollo de Software (incompleto)</li>
-        <li data-es="2013–2019: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador - Bachiller en Ciencias" data-en="2013–2019: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador - High School Diploma in Science">2013–2019: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador - Bachiller en Ciencias</li>
-        <li data-es="2005–2013: Centro Educativo Indira Gandhi, Quito, Ecuador - Estudios primarios" data-en="2005–2013: Centro Educativo Indira Gandhi, Quito, Ecuador - Primary Studies">2005–2013: Centro Educativo Indira Gandhi, Quito, Ecuador - Estudios primarios</li>
+        <li
+          data-es="2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador - Ingeniería en Ciencias de la Computación"
+          data-en="2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador - Computer Science Engineering">
+          2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador - Ingeniería en Ciencias de la Computación</li>
+        <li
+          data-es="2019–2020: Escuela Politécnica Nacional, Quito, Ecuador - Ingeniería en Desarrollo de Software (incompleto)"
+          data-en="2019–2020: Escuela Politécnica Nacional, Quito, Ecuador - Software Development Engineering (incomplete)">
+          2019–2020: Escuela Politécnica Nacional, Quito, Ecuador - Ingeniería en Desarrollo de Software (incompleto)
+        </li>
+        <li data-es="2013–2019: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador - Bachiller en Ciencias"
+          data-en="2013–2019: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador - High School Diploma in Science">
+          2013–2019: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador - Bachiller en Ciencias</li>
+        <li data-es="2005–2013: Centro Educativo Indira Gandhi, Quito, Ecuador - Estudios primarios"
+          data-en="2005–2013: Centro Educativo Indira Gandhi, Quito, Ecuador - Primary Studies">2005–2013: Centro
+          Educativo Indira Gandhi, Quito, Ecuador - Estudios primarios</li>
       </ul>
     </section>
 
@@ -112,8 +170,11 @@
       <h4 data-es="Pasante en Datos y Analítica" data-en="Data & Analytics Intern">Pasante en Datos y Analítica</h4>
       <p><strong>Banco Pichincha</strong> | <em>Mar - Sep 2024</em></p>
       <ul>
-        <li data-es="Automatización de procesos del RUN de seguros." data-en="Automation of the RUN insurance processes.">Automatización de procesos del RUN de seguros.</li>
-        <li data-es="Colaboración en la migración a la nube de uno de los procesos del banco." data-en="Collaborated in the cloud migration of a core banking process.">Colaboración en la migración a la nube de uno de los procesos del banco.</li>
+        <li data-es="Automatización de procesos del RUN de seguros."
+          data-en="Automation of the RUN insurance processes.">Automatización de procesos del RUN de seguros.</li>
+        <li data-es="Colaboración en la migración a la nube de uno de los procesos del banco."
+          data-en="Collaborated in the cloud migration of a core banking process.">Colaboración en la migración a la
+          nube de uno de los procesos del banco.</li>
       </ul>
     </section>
 
@@ -130,19 +191,30 @@
     <section id="certificaciones">
       <h2 class="mb-3" data-es="Certificaciones" data-en="Certifications">Certificaciones</h2>
       <ul class="list-unstyled">
-        <li data-es="2023: Ganador del Datatón UPS" data-en="2023: UPS Datathon Winner">2023: Ganador del Datatón UPS</li>
-        <li data-es="2024: Certificación en Stratio Generative AI Data Fabric: Basics, Business, Operations" data-en="2024: Stratio Generative AI Data Fabric Certification: Basics, Business, Operations">2024: Certificación en Stratio Generative AI Data Fabric: Basics, Business, Operations</li>
-        <li data-es="2025: Certificado Profesional en Análisis Avanzado de Datos de Google (7 cursos)" data-en="2025: Google Advanced Data Analytics Professional Certificate (7 courses)">2025: Certificado Profesional en Análisis Avanzado de Datos de Google (7 cursos)</li>
-        <li data-es="2025: Certificado Profesional de Desarrollo en Python de Microsoft (6 cursos)" data-en="2025: Microsoft Python Development Professional Certificate (6 courses)">2025: Certificado Profesional de Desarrollo en Python de Microsoft (6 cursos)</li>
-        <li data-es="2025: Certificado Profesional en Ciencia de Datos de IBM (12 cursos)" data-en="2025: IBM Data Science Professional Certificate (12 courses)">2025: Certificado Profesional en Ciencia de Datos de IBM (12 cursos)</li>
+        <li data-es="2023: Ganador del Datatón UPS" data-en="2023: UPS Datathon Winner">2023: Ganador del Datatón UPS
+        </li>
+        <li data-es="2024: Certificación en Stratio Generative AI Data Fabric: Basics, Business, Operations"
+          data-en="2024: Stratio Generative AI Data Fabric Certification: Basics, Business, Operations">2024:
+          Certificación en Stratio Generative AI Data Fabric: Basics, Business, Operations</li>
+        <li data-es="2025: Certificado Profesional en Análisis Avanzado de Datos de Google (7 cursos)"
+          data-en="2025: Google Advanced Data Analytics Professional Certificate (7 courses)">2025: Certificado
+          Profesional en Análisis Avanzado de Datos de Google (7 cursos)</li>
+        <li data-es="2025: Certificado Profesional de Desarrollo en Python de Microsoft (6 cursos)"
+          data-en="2025: Microsoft Python Development Professional Certificate (6 courses)">2025: Certificado
+          Profesional de Desarrollo en Python de Microsoft (6 cursos)</li>
+        <li data-es="2025: Certificado Profesional en Ciencia de Datos de IBM (12 cursos)"
+          data-en="2025: IBM Data Science Professional Certificate (12 courses)">2025: Certificado Profesional en
+          Ciencia de Datos de IBM (12 cursos)</li>
       </ul>
     </section>
 
     <section id="idiomas">
       <h2 class="mb-3" data-es="Idiomas" data-en="Languages">Idiomas</h2>
       <ul class="list-unstyled">
-        <li data-es="Español: Lengua materna (C2)" data-en="Spanish: Native speaker (C2)">Español: Lengua materna (C2)</li>
-        <li data-es="Inglés: Nivel intermedio (B1)" data-en="English: Intermediate (B1)">Inglés: Nivel intermedio (B1)</li>
+        <li data-es="Español: Lengua materna (C2)" data-en="Spanish: Native speaker (C2)">Español: Lengua materna (C2)
+        </li>
+        <li data-es="Inglés: Nivel intermedio (B1)" data-en="English: Intermediate (B1)">Inglés: Nivel intermedio (B1)
+        </li>
       </ul>
     </section>
 
@@ -157,8 +229,8 @@
     </section>
 
     <footer class="text-center mt-5">
-      <p data-es="© 2025 Kevin Castillo. Todos los derechos reservados." 
-         data-en="© 2025 Kevin Castillo. All rights reserved.">
+      <p data-es="© 2025 Kevin Castillo. Todos los derechos reservados."
+        data-en="© 2025 Kevin Castillo. All rights reserved.">
         © 2025 Kevin Castillo. Todos los derechos reservados.
       </p>
     </footer>
@@ -178,4 +250,5 @@
     setLanguage('es');
   </script>
 </body>
+
 </html>
