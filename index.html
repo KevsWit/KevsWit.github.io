@@ -16,235 +16,175 @@
       --text: #333;
       --accent: #ffcc00;
     }
-
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Muli', sans-serif;
-      color: var(--text);
-      background: var(--light);
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body { margin:0; font-family:'Muli',sans-serif; color:var(--text); background:var(--light); }
+    a { text-decoration:none; color:inherit; }
 
     /* SIDEBAR */
     #sideNav {
-      position: fixed;
-      top: 0; left: 0;
-      width: 240px;
-      height: 100vh;
+      position: fixed; top:0; left:0;
+      width:240px; height:100vh;
       background: linear-gradient(180deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 1000;
-      transition: width .3s ease;
+      color:#fff; padding:2rem 1rem;
+      display:flex; flex-direction:column; align-items:center;
+      z-index:1000; transition:width .3s ease;
     }
-    #sideNav:hover {
-      width: 260px;
+    #sideNav:hover { width:260px; }
+
+    /* PERFIL */
+    .sidebar-header {
+      text-align:center; margin-bottom:1.5rem;
     }
-    #sideNav .sidebar-header {
-      text-align: center;
-      margin-bottom: 2rem;
+    .img-profile {
+      width:100px; height:100px; border-radius:50%;
+      object-fit:cover; border:3px solid var(--accent);
+      transition:transform .3s ease;
     }
-    #sideNav .img-profile {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--accent);
-      transition: transform .3s ease;
-    }
-    #sideNav .img-profile:hover {
-      transform: scale(1.05);
-    }
+    .img-profile:hover { transform:scale(1.05); }
     #sideNav h4 {
-      margin: .5rem 0 .2rem;
-      font-weight: 700;
-      letter-spacing: 1px;
+      margin:.5rem 0 .2rem; font-weight:700; letter-spacing:1px;
     }
     #sideNav p {
-      font-size: .9rem;
-      font-weight: 300;
+      font-size:.9rem; font-weight:300; line-height:1.2;
     }
-    #sideNav .lang-switch {
-      margin-top: 1rem;
+
+    /* BANDERAS */
+    .lang-switch {
+      display:flex; gap:.5rem; margin:1rem 0;
     }
-    #sideNav ul.nav {
-      list-style: none;
-      padding: 0;
-      margin: 2rem 0 0;
-      width: 100%;
+    .lang-switch .flag {
+      width:24px; height:24px; cursor:pointer; opacity:0.6;
+      transition:opacity .3s ease;
     }
-    #sideNav ul.nav li {
-      margin: .5rem 0;
+    .lang-switch .flag.active { opacity:1; }
+
+    /* BOTÓN HAMBURGUESA (solo móvil) */
+    .menu-toggle {
+      display:none;
+      background:none; border:none; color:#fff;
+      font-size:1.5rem; cursor:pointer;
+      margin-bottom:1rem;
     }
-    #sideNav ul.nav a {
-      display: block;
-      padding: .6rem 1rem;
-      border-radius: 4px;
-      transition: background .3s ease, padding-left .3s ease;
-      font-weight: 500;
+
+    /* NAVEGACIÓN */
+    ul.nav {
+      list-style:none; padding:0; margin:0; width:100%;
     }
-    #sideNav ul.nav a:hover,
-    #sideNav ul.nav a.active {
-      background: var(--accent);
-      color: var(--dark);
-      padding-left: 1.4rem;
+    ul.nav li { margin:.5rem 0; }
+    ul.nav a {
+      display:block; padding:.6rem 1rem; border-radius:4px;
+      transition:background .3s ease,padding-left .3s ease;
+      font-weight:500;
+    }
+    ul.nav a:hover, ul.nav a.active {
+      background:var(--accent); color:var(--dark);
+      padding-left:1.4rem;
     }
 
     /* MAIN CONTENT */
     #mainContent {
-      margin-left: 260px;
-      padding: 2rem;
-      transition: margin-left .3s ease;
+      margin-left:260px; padding:2rem;
+      transition:margin-left .3s ease;
     }
     section {
-      background: #fff;
-      margin-bottom: 2rem;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      background:#fff; margin-bottom:2rem;
+      padding:2rem; border-radius:8px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.07);
     }
     section h2 {
-      position: relative;
-      padding-bottom: .5rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-      color: var(--primary);
+      position:relative; padding-bottom:.5rem;
+      margin-bottom:1rem; font-weight:600;
+      color:var(--primary);
     }
     section h2::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 40px;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 2px;
+      content:''; position:absolute; left:0; bottom:0;
+      width:40px; height:3px; background:var(--accent);
+      border-radius:2px;
     }
     section h4 {
-      margin-top: 1.5rem;
-      font-weight: 600;
-      color: var(--secondary);
+      margin-top:1.5rem; font-weight:600;
+      color:var(--secondary);
     }
-    ul.list-unstyled {
-      padding: 0;
-      list-style: none;
-    }
+    ul.list-unstyled { padding:0; list-style:none; }
     ul.list-unstyled li {
-      margin-bottom: .5rem;
-      position: relative;
-      padding-left: 1.2rem;
+      margin-bottom:.5rem; position:relative;
+      padding-left:1.2rem;
     }
     ul.list-unstyled li::before {
-      content: '•';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: bold;
+      content:'•'; position:absolute; left:0;
+      color:var(--accent); font-weight:bold;
     }
-    p, li {
-      line-height: 1.6;
-      font-size: .95rem;
-    }
+    p, li { line-height:1.6; font-size:.95rem; }
 
     /* FOOTER */
     footer {
-      text-align: center;
-      font-size: .85rem;
-      color: #777;
-      margin-top: 4rem;
+      text-align:center; font-size:.85rem;
+      color:#777; margin-top:4rem;
     }
 
-    /* Flags */
-    .lang-switch {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-    .lang-switch .flag {
-      width: 24px;
-      height: 24px;
-      cursor: pointer;
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
-    }
-    .lang-switch .flag.active {
-      opacity: 1;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
+    /* RESPONSIVE: móviles */
+    @media (max-width:768px) {
       #sideNav {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        align-items: center;
-        padding: 1rem;
+        position:relative; width:100%; height:auto;
+        padding:1rem; flex-direction:column;
+        align-items:center;
       }
-      #sideNav .sidebar-header {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+      #sideNav:hover { width:100%; }
+
+      .sidebar-header {
+        margin-bottom:1rem;
       }
-      #sideNav .img-profile {
-        width: 50px; height: 50px;
-      }
-      #sideNav ul.nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0;
-      }
-      #sideNav ul.nav li {
-        margin: .5rem;
-      }
-      #mainContent {
-        margin-left: 0;
-        padding: 1rem;
-      }
-      section {
-        padding: 1.5rem;
-      }
+      .img-profile { width:80px; height:80px; }
+
+      /* mostrar hamburguesa */
+      .menu-toggle { display:block; }
+
+      /* ocultar menú hasta abrir */
+      ul.nav { display:none; flex-direction:column; width:100%; margin:0; }
+
+      /* abrir menú */
+      #sideNav.open ul.nav { display:flex; }
+
+      /* main content */
+      #mainContent { margin-left:0; padding:1rem; }
+      section { padding:1.5rem; }
     }
   </style>
 </head>
 
 <body id="page-top">
   <nav id="sideNav">
+    <!-- PERFIL -->
     <div class="sidebar-header">
       <img class="img-profile" src="images/kevpic.jpg" alt="Kevin Castillo">
-      <div>
-        <h4>Kevin Castillo</h4>
-        <p data-es="Desarrollador de IA, Científico de datos"
-           data-en="AI Developer, Data Scientist">Desarrollador de IA, Científico de datos</p>
-      </div>
+      <h4>Kevin Castillo</h4>
+      <p data-es="Desarrollador de IA, Científico de datos"
+         data-en="AI Developer, Data Scientist">
+        Desarrollador de IA, Científico de datos
+      </p>
     </div>
+
+    <!-- BANDERAS (antes del nav) -->
+    <div class="lang-switch">
+      <img src="images/ec_flag.png" alt="ES" id="btnEs" class="flag active">
+      <img src="images/us_flag.png" alt="EN" id="btnEn" class="flag">
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA (solo aparece en móvil) -->
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- NAVEGACIÓN -->
     <ul class="nav flex-column">
       <li><a class="nav-link" href="#sobre-mi" data-es="Sobre mí" data-en="About Me">Sobre mí</a></li>
-      <li><a class="nav-link" href="#educacion"  data-es="Educación" data-en="Education">Educación</a></li>
+      <li><a class="nav-link" href="#educacion" data-es="Educación" data-en="Education">Educación</a></li>
       <li><a class="nav-link" href="#experiencia" data-es="Experiencia" data-en="Experience">Experiencia</a></li>
       <li><a class="nav-link" href="#habilidades" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</a></li>
       <li><a class="nav-link" href="#certificaciones" data-es="Certificaciones" data-en="Certifications">Certificaciones</a></li>
       <li><a class="nav-link" href="#idiomas" data-es="Idiomas" data-en="Languages">Idiomas</a></li>
       <li><a class="nav-link" href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
     </ul>
-    <div class="lang-switch">
-      <img src="images/ec_flag.png" alt="ES" id="btnEs" class="flag active">
-      <img src="images/us_flag.png" alt="EN" id="btnEn" class="flag">
-    </div>
   </nav>
 
   <div id="mainContent">
@@ -386,20 +326,23 @@
   </div>
 
   <script>
+    // Toggle móvil
+    const sideNav = document.getElementById('sideNav');
+    document.querySelector('.menu-toggle')
+      .addEventListener('click', () => sideNav.classList.toggle('open'));
+
+    // Cambio de idioma
     const btnEs = document.getElementById('btnEs');
     const btnEn = document.getElementById('btnEn');
-
     function setLanguage(lang) {
       document.querySelectorAll('[data-es][data-en]').forEach(el => {
         el.textContent = el.getAttribute(`data-${lang}`);
       });
-      btnEs.classList.toggle('active', lang === 'es');
-      btnEn.classList.toggle('active', lang === 'en');
+      btnEs.classList.toggle('active', lang==='es');
+      btnEn.classList.toggle('active', lang==='en');
     }
-
     btnEs.addEventListener('click', () => setLanguage('es'));
     btnEn.addEventListener('click', () => setLanguage('en'));
-
     setLanguage('es');
   </script>
 </body>
