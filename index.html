@@ -1,155 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kevin Castillo - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:wght@300;400;600;800&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:wght@300;400;600;800&display=swap"
+    rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #0066cc;
-      --secondary: #004a99;
-      --light: #f5f9ff;
-      --dark: #222;
-      --text: #333;
-      --accent: #ffcc00;
-    }
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-    body { margin:0; font-family:'Muli',sans-serif; color:var(--text); background:var(--light); }
-    a { text-decoration:none; color:inherit; }
-
-    /* SIDEBAR */
-    #sideNav {
-      position: fixed; top:0; left:0;
-      width:240px; height:100vh;
-      background: linear-gradient(180deg, var(--primary), var(--secondary));
-      color:#fff; padding:2rem 1rem;
-      display:flex; flex-direction:column; align-items:center;
-      z-index:1000; transition:width .3s ease;
-    }
-    #sideNav:hover { width:260px; }
-
-    /* PERFIL */
-    .sidebar-header {
-      text-align:center; margin-bottom:1.5rem;
-    }
-    .img-profile {
-      width:100px; height:100px; border-radius:50%;
-      object-fit:cover; border:3px solid var(--accent);
-      transition:transform .3s ease;
-    }
-    .img-profile:hover { transform:scale(1.05); }
-    #sideNav h4 {
-      margin:.5rem 0 .2rem; font-weight:700; letter-spacing:1px;
-    }
-    #sideNav p {
-      font-size:.9rem; font-weight:300; line-height:1.2;
-    }
-
-    /* BANDERAS */
-    .lang-switch {
-      display:flex; gap:.5rem; margin:1rem 0;
-    }
-    .lang-switch .flag {
-      width:24px; height:24px; cursor:pointer; opacity:0.6;
-      transition:opacity .3s ease;
-    }
-    .lang-switch .flag.active { opacity:1; }
-
-    /* BOTÓN HAMBURGUESA (solo móvil) */
-    .menu-toggle {
-      display:none;
-      background:none; border:none; color:#fff;
-      font-size:1.5rem; cursor:pointer;
-      margin-bottom:1rem;
-    }
-
-    /* NAVEGACIÓN */
-    ul.nav {
-      list-style:none; padding:0; margin:0; width:100%;
-    }
-    ul.nav li { margin:.5rem 0; }
-    ul.nav a {
-      display:block; padding:.6rem 1rem; border-radius:4px;
-      transition:background .3s ease,padding-left .3s ease;
-      font-weight:500;
-    }
-    ul.nav a:hover, ul.nav a.active {
-      background:var(--accent); color:var(--dark);
-      padding-left:1.4rem;
-    }
-
-    /* MAIN CONTENT */
-    #mainContent {
-      margin-left:260px; padding:2rem;
-      transition:margin-left .3s ease;
-    }
-    section {
-      background:#fff; margin-bottom:2rem;
-      padding:2rem; border-radius:8px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.07);
-    }
-    section h2 {
-      position:relative; padding-bottom:.5rem;
-      margin-bottom:1rem; font-weight:600;
-      color:var(--primary);
-    }
-    section h2::after {
-      content:''; position:absolute; left:0; bottom:0;
-      width:40px; height:3px; background:var(--accent);
-      border-radius:2px;
-    }
-    section h4 {
-      margin-top:1.5rem; font-weight:600;
-      color:var(--secondary);
-    }
-    ul.list-unstyled { padding:0; list-style:none; }
-    ul.list-unstyled li {
-      margin-bottom:.5rem; position:relative;
-      padding-left:1.2rem;
-    }
-    ul.list-unstyled li::before {
-      content:'•'; position:absolute; left:0;
-      color:var(--accent); font-weight:bold;
-    }
-    p, li { line-height:1.6; font-size:.95rem; }
-
-    /* FOOTER */
-    footer {
-      text-align:center; font-size:.85rem;
-      color:#777; margin-top:4rem;
-    }
-
-    /* RESPONSIVE: móviles */
-    @media (max-width:768px) {
-      #sideNav {
-        position:relative; width:100%; height:auto;
-        padding:1rem; flex-direction:column;
-        align-items:center;
-      }
-      #sideNav:hover { width:100%; }
-
-      .sidebar-header {
-        margin-bottom:1rem;
-      }
-      .img-profile { width:80px; height:80px; }
-
-      /* mostrar hamburguesa */
-      .menu-toggle { display:block; }
-
-      /* ocultar menú hasta abrir */
-      ul.nav { display:none; flex-direction:column; width:100%; margin:0; }
-
-      /* abrir menú */
-      #sideNav.open ul.nav { display:flex; }
-
-      /* main content */
-      #mainContent { margin-left:0; padding:1rem; }
-      section { padding:1.5rem; }
-    }
-  </style>
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -158,9 +18,8 @@
     <div class="sidebar-header">
       <img class="img-profile" src="images/kevpic.jpg" alt="Kevin Castillo">
       <h4>Kevin Castillo</h4>
-      <p data-es="Desarrollador de IA, Científico de datos"
-         data-en="AI Developer, Data Scientist">
-        Desarrollador de IA, Científico de datos
+      <p data-es="Ingeniero de IA y ML, Científico de datos" data-en="AI & ML Engineer, Data Scientist">
+        Ingeniero de IA y ML, Científico de datos
       </p>
     </div>
 
@@ -180,10 +39,13 @@
       <li><a class="nav-link" href="#sobre-mi" data-es="Sobre mí" data-en="About Me">Sobre mí</a></li>
       <li><a class="nav-link" href="#educacion" data-es="Educación" data-en="Education">Educación</a></li>
       <li><a class="nav-link" href="#experiencia" data-es="Experiencia" data-en="Experience">Experiencia</a></li>
-      <li><a class="nav-link" href="#habilidades" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</a></li>
-      <li><a class="nav-link" href="#certificaciones" data-es="Certificaciones" data-en="Certifications">Certificaciones</a></li>
+      <li><a class="nav-link" href="#habilidades" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades
+          Técnicas</a></li>
+      <li><a class="nav-link" href="#certificaciones" data-es="Certificaciones"
+          data-en="Certifications">Certificaciones</a></li>
       <li><a class="nav-link" href="#idiomas" data-es="Idiomas" data-en="Languages">Idiomas</a></li>
       <li><a class="nav-link" href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      <li><a class="nav-link" href="#curriculum" data-es="Currículum" data-en="Curriculum">Contacto</a></li>
     </ul>
   </nav>
 
@@ -192,8 +54,11 @@
     <section id="sobre-mi">
       <h2 class="mb-3" data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
       <p data-es="¡Hola! Soy Kevin Castillo, apasionado por la resolución de problemas complejos y la creación de soluciones innovadoras a través de la programación. Tengo una sólida base en algoritmos, datos, aprendizaje automático e inteligencia artificial. Mi objetivo es aplicar mis conocimientos en un entorno real, mejorar mis habilidades blandas y desarrollar aplicaciones innovadoras."
-         data-en="Hi! I'm Kevin Castillo, passionate about solving complex problems and creating innovative solutions through programming. I have a solid foundation in algorithms, data, machine learning and artificial intelligence. My goal is to apply my knowledge in real-world environments, improve my soft skills, and develop innovative applications.">
-        ¡Hola! Soy Kevin Castillo, apasionado por la resolución de problemas complejos y la creación de soluciones innovadoras a través de la programación. Tengo una sólida base en algoritmos, datos, aprendizaje automático e inteligencia artificial. Mi objetivo es aplicar mis conocimientos en un entorno real, mejorar mis habilidades blandas y desarrollar aplicaciones innovadoras.
+        data-en="Hi! I'm Kevin Castillo, passionate about solving complex problems and creating innovative solutions through programming. I have a solid foundation in algorithms, data, machine learning and artificial intelligence. My goal is to apply my knowledge in real-world environments, improve my soft skills, and develop innovative applications.">
+        ¡Hola! Soy Kevin Castillo, apasionado por la resolución de problemas complejos y la creación de soluciones
+        innovadoras a través de la programación. Tengo una sólida base en algoritmos, datos, aprendizaje automático e
+        inteligencia artificial. Mi objetivo es aplicar mis conocimientos en un entorno real, mejorar mis habilidades
+        blandas y desarrollar aplicaciones innovadoras.
       </p>
     </section>
 
@@ -201,20 +66,22 @@
     <section id="educacion">
       <h2 class="mb-3" data-es="Educación" data-en="Education">Educación</h2>
       <ul class="list-unstyled">
-        <li data-es="2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador – Ingeniería en Ciencias de la Computación"
-            data-en="2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador – Computer Science Engineering">
+        <li
+          data-es="2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador – Ingeniería en Ciencias de la Computación"
+          data-en="2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador – Computer Science Engineering">
           2021–2025: Universidad Politécnica Salesiana, Quito, Ecuador – Ingeniería en Ciencias de la Computación
         </li>
-        <li data-es="2019–2020: Escuela Politécnica Nacional, Quito, Ecuador – Ingeniería en Desarrollo de Software (incompleto)"
-            data-en="2019–2020: Escuela Politécnica Nacional, Quito, Ecuador – Software Development Engineering (incomplete)">
+        <li
+          data-es="2019–2020: Escuela Politécnica Nacional, Quito, Ecuador – Ingeniería en Desarrollo de Software (incompleto)"
+          data-en="2019–2020: Escuela Politécnica Nacional, Quito, Ecuador – Software Development Engineering (incomplete)">
           2019–2020: Escuela Politécnica Nacional, Quito, Ecuador – Ingeniería en Desarrollo de Software (incompleto)
         </li>
         <li data-es="2013–2019: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador – Bachiller en Ciencias"
-            data-en="2013–2019: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador – High School Diploma in Science">
+          data-en="2013–2019: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador – High School Diploma in Science">
           2013–2019: Unidad Educativa Municipal Fernández Madrid, Quito, Ecuador – Bachiller en Ciencias
         </li>
         <li data-es="2005–2013: Centro Educativo Indira Gandhi, Quito, Ecuador – Estudios primarios"
-            data-en="2005–2013: Centro Educativo Indira Gandhi, Quito, Ecuador – Primary Studies">
+          data-en="2005–2013: Centro Educativo Indira Gandhi, Quito, Ecuador – Primary Studies">
           2005–2013: Centro Educativo Indira Gandhi, Quito, Ecuador – Estudios primarios
         </li>
       </ul>
@@ -222,11 +89,11 @@
       <h2 class="mb-3" data-es="Títulos" data-en="Degrees">Títulos</h2>
       <ul class="list-unstyled">
         <li data-es="2019: Bachiller en Ciencias – UEMFM, Quito, Ecuador"
-            data-en="2019: High School Diploma – Science Specialization, UEMFM, Quito, Ecuador">
+          data-en="2019: High School Diploma – Science Specialization, UEMFM, Quito, Ecuador">
           2019: Bachiller en Ciencias – UEMFM, Quito, Ecuador
         </li>
         <li data-es="2025: Ingeniero en Ciencias de la Computación – UPS, Quito, Ecuador"
-            data-en="2025: Computer Science Engineer, UPS, Quito, Ecuador">
+          data-en="2025: Computer Science Engineer, UPS, Quito, Ecuador">
           2025: Ingeniero en Ciencias de la Computación – UPS, Quito, Ecuador
         </li>
       </ul>
@@ -240,20 +107,26 @@
       <p><strong>Banco Pichincha</strong> | <em>Mar - Sep 2024</em></p>
       <ul>
         <li data-es="Automatización de procesos del RUN de seguros."
-            data-en="Automation of the RUN insurance processes.">
+          data-en="Automation of the RUN insurance processes.">
           Automatización de procesos del RUN de seguros.
         </li>
         <li data-es="Colaboración en la migración a la nube de uno de los procesos del banco."
-            data-en="Collaborated in the cloud migration of a core banking process.">
+          data-en="Collaborated in the cloud migration of a core banking process.">
           Colaboración en la migración a la nube de uno de los procesos del banco.
         </li>
       </ul>
 
       <h4 data-es="Desarrollador de IA" data-en="AI Developer">Desarrollador de IA</h4>
-      <p><strong>Qikstarts AI</strong> | <em>Abr - Jun 2025</em></p>
+      <p><strong>Qikstarts AI</strong> | <em data-es="Abr - Presente" data-en="Apr - Present">Abr - Presente</em></p>
       <p data-es="Desarrollo de una plataforma de IA especializada en fidelización y ventas."
-         data-en="Development of an AI platform specialized in loyalty and sales.">
+        data-en="Development of an AI platform specialized in loyalty and sales.">
         Desarrollo de una plataforma de IA especializada en fidelización y ventas.
+      </p>
+      <h4 data-es="Desarrollador Jr" data-en="Jr Developer">Desarrollador Jr</h4>
+      <p><strong>Innovadevs</strong> | <em data-es="Ago - Presente" data-en="Aug - Present">Ago - Presente</em></p>
+      <p data-es="Mantenimiento y desarrollo de software."
+        data-en="Software maintenance and development.">
+        Mantenimiento y desarrollo de software.
       </p>
     </section>
 
@@ -263,52 +136,57 @@
 
       <h5 data-es="Áreas de especialización" data-en="Areas of Expertise">Áreas de especialización</h5>
       <p data-es="Ingeniería en IA y ML • Ciencia de datos • Desarrollo web • Aplicaciones de escritorio • Algoritmos"
-         data-en="AI & ML engineering • Data Science • Web Development • Desktop Applications • Algorithms">
+        data-en="AI & ML engineering • Data Science • Web Development • Desktop Applications • Algorithms">
         Ingeniería en IA y ML • Ciencia de datos • Desarrollo web • Aplicaciones de escritorio • Algoritmos
       </p>
 
       <h5 data-es="Lenguajes de programación" data-en="Programming Languages">Lenguajes de programación</h5>
-      <p>C# | Python | R | JavaScript | C++ | Java | SQL | Haskell</p>
+      <p>C# • Python • R • JavaScript • C++ • Java • SQL • Haskell</p>
 
       <h5 data-es="Desarrollo Web" data-en="Web Development">Desarrollo Web</h5>
-      <p>HTML5 | CSS | JavaScript</p>
+      <p>HTML5 • CSS • JavaScript</p>
 
       <h5 data-es="Sistemas Operativos" data-en="Operating Systems">Sistemas Operativos</h5>
-      <p>Linux</p>
+      <p>Linux • Windows</p>
     </section>
 
     <!-- CERTIFICACIONES -->
     <section id="certificaciones">
       <h2 class="mb-3" data-es="Certificaciones" data-en="Certifications">Certificaciones</h2>
       <ul class="list-unstyled">
-        <li data-es="2023: Ganador del Datatón UPS" data-en="2023: UPS Datathon Winner">2023: Ganador del Datatón UPS</li>
+        <li data-es="2023: Ganador del Datatón UPS" data-en="2023: UPS Datathon Winner">2023: Ganador del Datatón UPS
+        </li>
         <li data-es="2024: Certificación en Stratio Generative AI Data Fabric: Basics, Business, Operations"
-            data-en="2024: Stratio Generative AI Data Fabric Certification: Basics, Business, Operations">
+          data-en="2024: Stratio Generative AI Data Fabric Certification: Basics, Business, Operations">
           2024: Certificación en Stratio Generative AI Data Fabric: Basics, Business, Operations
         </li>
         <li data-es="2025: Certificado de Curso Completo de Haskell: De cero a experto"
-            data-en="2025: Complete Haskell Course: From Zero to Expert Certificate">
+          data-en="2025: Complete Haskell Course: From Zero to Expert Certificate">
           2025: Certificado de Curso Completo de Haskell: De cero a experto
         </li>
         <li data-es="2025: Certificado Profesional en Análisis Avanzado de Datos de Google"
-            data-en="2025: Google Advanced Data Analytics Professional Certificate">
+          data-en="2025: Google Advanced Data Analytics Professional Certificate">
           2025: Certificado Profesional en Análisis Avanzado de Datos de Google
         </li>
         <li data-es="2025: Certificado Profesional de Desarrollo en Python de Microsoft"
-            data-en="2025: Microsoft Python Development Professional Certificate">
+          data-en="2025: Microsoft Python Development Professional Certificate">
           2025: Certificado Profesional de Desarrollo en Python de Microsoft
         </li>
         <li data-es="2025: Certificado Profesional en Ciencia de Datos de IBM"
-            data-en="2025: IBM Data Science Professional Certificate">
+          data-en="2025: IBM Data Science Professional Certificate">
           2025: Certificado Profesional en Ciencia de Datos de IBM
         </li>
         <li data-es="2025: Certificado Profesional en Ingeniería de IA y ML de Microsoft"
-            data-en="2025: Microsoft AI & ML Engineering Professional Certificate">
+          data-en="2025: Microsoft AI & ML Engineering Professional Certificate">
           2025: Certificado Profesional en Ingeniería de IA y ML de Microsoft
         </li>
         <li data-es="2025: Certificado Profesional en Ingeniería de IA de IBM"
-            data-en="2025: IBM AI Engineering Professional Certificate">
+          data-en="2025: IBM AI Engineering Professional Certificate">
           2025: Certificado Profesional en Ingeniería de IA de IBM
+        </li>
+        <li data-es="2025: Certificado Profesional en RAG y agentes de IA de IBM"
+          data-en="2025: IBM RAG and Agentic AI Professional Certificate">
+          2025: Certificado Profesional en RAG y agentes de IA de IBM
         </li>
       </ul>
     </section>
@@ -317,8 +195,10 @@
     <section id="idiomas">
       <h2 class="mb-3" data-es="Idiomas" data-en="Languages">Idiomas</h2>
       <ul class="list-unstyled">
-        <li data-es="Español: Lengua materna (C2)" data-en="Spanish: Native speaker (C2)">Español: Lengua materna (C2)</li>
-        <li data-es="Inglés: Nivel intermedio (B1)" data-en="English: Intermediate (B1)">Inglés: Nivel intermedio (B1)</li>
+        <li data-es="Español: Lengua materna (C2)" data-en="Spanish: Native speaker (C2)">Español: Lengua materna (C2)
+        </li>
+        <li data-es="Inglés: Nivel intermedio (B1)" data-en="English: Intermediate (B1)">Inglés: Nivel intermedio (B1)
+        </li>
       </ul>
     </section>
 
@@ -328,39 +208,44 @@
       <ul class="list-unstyled">
         <li><strong>GitHub</strong>: <a href="https://github.com/KevsWit" target="_blank">KevsWit</a></li>
         <li><strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/kevicast/" target="_blank">kevicast</a></li>
-        <li><strong>Email</strong>: <a href="mailto:Kgus.castillo@outlook.com">Kgus.castillo@outlook.com</a></li>
+        <li><strong>Emails</strong>:
+          <ul class="list-unstyled">
+            <li><a href="mailto:Kgus.castillo@outlook.com">Kgus.castillo@outlook.com</a></li>
+            <li><a href="mailto:kev.gcastillo@outlook.com">kev.gcastillo@outlook.com</a></li>
+          </ul>
+        </li>
         <li><strong>Teléfono / Phone</strong>: +593 988671223</li>
       </ul>
     </section>
 
+    <!-- CURRICULUM -->
+    <section id="curriculum">
+      <h2 class="mb-3" data-es="Currículum" data-en="Curriculum">Currículum</h2>
+      <p data-es="Descarga mi CV actualizado en el idioma seleccionado."
+        data-en="Download my latest resume in the selected language.">
+        Descarga mi CV actualizado en el idioma seleccionado.
+      </p>
+
+      <div class="cv-card">
+        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+        <a id="cvLink" class="btn-cv" download data-es="Descargar CV (ES)" data-en="Download CV (EN)"
+          data-es-href="cvs/Kevin_Castillo_CV.pdf" data-en-href="cvs/Kevin_Castillo_CV_ENG.pdf"
+          href="cvs/Kevin_Castillo_CV.pdf">
+          Descargar CV (ES)
+        </a>
+        <small class="cv-note" data-es="PDF · ~1–2 MB" data-en="PDF · ~1–2 MB">PDF · ~1–2 MB</small>
+      </div>
+    </section>
+
+
     <footer class="text-center mt-5">
       <p data-es="© 2025 Kevin Castillo. Todos los derechos reservados."
-         data-en="© 2025 Kevin Castillo. All rights reserved.">
+        data-en="© 2025 Kevin Castillo. All rights reserved.">
         © 2025 Kevin Castillo. Todos los derechos reservados.
       </p>
     </footer>
   </div>
-
-  <script>
-    // Toggle móvil
-    const sideNav = document.getElementById('sideNav');
-    document.querySelector('.menu-toggle')
-      .addEventListener('click', () => sideNav.classList.toggle('open'));
-
-    // Cambio de idioma
-    const btnEs = document.getElementById('btnEs');
-    const btnEn = document.getElementById('btnEn');
-    function setLanguage(lang) {
-      document.querySelectorAll('[data-es][data-en]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
-      });
-      btnEs.classList.toggle('active', lang==='es');
-      btnEn.classList.toggle('active', lang==='en');
-    }
-    btnEs.addEventListener('click', () => setLanguage('es'));
-    btnEn.addEventListener('click', () => setLanguage('en'));
-    setLanguage('es');
-  </script>
+  <script src="script.js"></script>
 </body>
-</html>
 
+</html>
