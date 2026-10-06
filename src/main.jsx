@@ -43,7 +43,7 @@ const copy = {
 
 const experience = [
   { company: 'Banco Pichincha', date: { es: 'Mar – Sep 2024', en: 'Mar – Sep 2024' }, role: { es: 'Pasante Datos y Analítica', en: 'Data & Analytics Intern' }, points: [{ es: 'Automatización de procesos de seguros y migración a la nube de banca, realizado en el CoE de Datos y Analítica.', en: 'Automated insurance processes and migrated banking processes to the cloud at the Data & Analytics CoE.' }] },
-  { company: 'Qikstarts AI', date: { es: 'Abr – Presente', en: 'Apr – Present' }, role: { es: 'Desarrollador de IA', en: 'AI Developer' }, points: [{ es: 'Desarrollo de una plataforma de IA especializada en fidelización y ventas.', en: 'Development of an AI platform specialized in loyalty and sales.' }] },
+  { company: 'Qikstarts AI', date: { es: 'Abr – Sep 2025', en: 'Apr – Sep 2025' }, role: { es: 'Desarrollador de IA', en: 'AI Developer' }, points: [{ es: 'Desarrollo de una plataforma de IA especializada en fidelización y ventas.', en: 'Development of an AI platform specialized in loyalty and sales.' }] },
   { company: 'Innovadevs', date: { es: 'Ago 2025 – Jul 2026', en: 'Aug 2025 – Jul 2026' }, role: { es: 'Analista de software', en: 'Software Analyst' }, points: [{ es: 'Mantenimiento y desarrollo del software GIRA.', en: 'Maintenance and development of the GIRA software.' }] },
   { company: 'Fundación Favorita', date: { es: 'Oct 2025 – Ago 2026', en: 'Oct 2025 – Aug 2026' }, role: { es: 'Desarrollador Frontend', en: 'Frontend Developer' }, points: [{ es: 'Desarrollo y diseño de aplicativo web para la administración de programas y proyectos de la fundación.', en: 'Developed and designed a web application to manage the foundation’s programs and projects.' }] },
 ]
