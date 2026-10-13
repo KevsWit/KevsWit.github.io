@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ArrowDown, ArrowRight, ArrowUpRight, Download, Mail, Menu, X, Github, Linkedin, Instagram, Phone, GraduationCap, BriefcaseBusiness, Award, Languages, Code2 } from 'lucide-react'
+import { ArrowDown, ArrowRight, ArrowUpRight, Download, Mail, Menu, X, Phone, GraduationCap, BriefcaseBusiness, Award, Languages, CodeXml } from 'lucide-react'
+import { FaFacebook, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa6'
 import './style.css'
 
 const name = 'Kevin Gustavo Castillo Onofa'
@@ -67,9 +68,10 @@ const certificates = [
   { year: '2025', title: { es: 'IBM: RAG y agentes de IA', en: 'IBM RAG and Agentic AI' }, url: 'https://www.coursera.org/account/accomplishments/specialization/B9R3Y3RLOSIA' },
 ]
 const socials = [
-  { label: 'GitHub', url: 'https://github.com/KevsWit', icon: Github },
-  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/kevicast/', icon: Linkedin },
-  { label: 'Instagram', url: 'https://www.instagram.com/kevgcastillo/', icon: Instagram },
+  { label: 'GitHub', url: 'https://github.com/KevsWit', icon: FaGithub },
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/kevicast/', icon: FaLinkedin },
+  { label: 'Instagram', url: 'https://www.instagram.com/kevgcastillo/', icon: FaInstagram },
+  { label: 'Facebook', url: 'https://www.facebook.com/kevgcastillo', icon: FaFacebook },
   { label: 'X', url: 'https://x.com/kevgcastillo', mark: '𝕏' },
   { label: 'TikTok', url: 'https://www.tiktok.com/@kg_castillo', mark: '♪' },
 ]
@@ -93,7 +95,7 @@ function App() {
     <main>
       <section id="inicio" className="hero"><div className="hero-grid container"><div className="hero-copy"><p className="eyebrow"><span className="status-dot" />{t.eyebrow}</p><p className="hero-hello">{t.hello}</p><h1>Kevin Gustavo<br /><span>Castillo Onofa.</span></h1><p className="hero-role">{t.role}</p><p className="hero-intro">{t.intro}</p><div className="hero-buttons"><a className="button button-primary" href="#experiencia">{t.view}<ArrowRight size={18} /></a><a className="button button-outline" href={cvHref} download>{t.cv}<Download size={18} /></a></div><div className="hero-socials">{socials.map(s => <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.label}>{s.icon ? <s.icon size={19} /> : <span>{s.mark}</span>}</a>)}</div></div><div className="hero-visual"><div className="portrait-frame"><img src="/images/kevpic.jpg" alt={name} /><div className="portrait-line" /></div><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="visual-label">AI · DATA · SOFTWARE</div></div></div><a href="#sobre-mi" className="scroll-cue" aria-label={t.about}><ArrowDown size={17} /><span>{t.scroll}</span></a></section>
 
-      <section id="sobre-mi" className="section about-section"><div className="container"><Heading number="01" title={t.about} lead={t.aboutLead} /><div className="about-grid"><p className="about-text">{t.aboutText}</p><div className="about-aside"><div className="aside-icon"><Code2 size={27} /></div><p>AI / ML</p><p>DATA SCIENCE</p><p>SOFTWARE DEVELOPMENT</p></div></div></div></section>
+      <section id="sobre-mi" className="section about-section"><div className="container"><Heading number="01" title={t.about} lead={t.aboutLead} /><div className="about-grid"><p className="about-text">{t.aboutText}</p><div className="about-aside"><div className="aside-icon"><CodeXml size={27} /></div><p>AI / ML</p><p>DATA SCIENCE</p><p>SOFTWARE DEVELOPMENT</p></div></div></div></section>
 
       <section id="experiencia" className="section tinted"><div className="container"><Heading number="02" title={t.experience} lead={t.experienceLead} /><div className="timeline">{experience.map(item => <article className="timeline-item" key={item.company}><div className="timeline-date">{item.date[lang]}</div><div className="timeline-body"><span className="timeline-icon"><BriefcaseBusiness size={17} /></span><h3>{item.role[lang]}</h3><p className="company">{item.company} · Quito, Ecuador</p><ul>{item.points.map(point => <li key={point.es}>{point[lang]}</li>)}</ul></div></article>)}</div></div></section>
 
